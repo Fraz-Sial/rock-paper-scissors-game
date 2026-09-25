@@ -1,58 +1,160 @@
-/* ROCK PAPER SCISSOR GAME */
-*{
+
+* {
     margin: 0;
     padding: 0;
     text-align: center;
+    box-sizing: border-box;
 }
-h1{
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
     background-color: rgb(2, 2, 114);
     color: white;
     height: 5rem;
     line-height: 5rem;
+    font-size: 2rem;
 }
-.choice{
+
+.choice {
     height: 165px;
     width: 165px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
-.choice:hover{
+
+.choice:hover {
     cursor: pointer;
     background-color: black;
 }
-img{
+
+img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
-.choices{
+
+.choices {
     display: flex;
     justify-content: center;
-    align-items: centre;
+    align-items: center;
     gap: 3rem;
     margin-top: 5rem;
 }
-.score-board{
+
+.score-board {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
     gap: 5rem;
 }
-#user-score,#comp-score{
+
+#user-score,
+#comp-score {
     font-size: 4rem;
 }
-.message-container{
+
+.message-container {
     margin-top: 5rem;
+    padding: 0 1rem;
 }
-#msg{
+
+#msg {
     background-color: black;
     color: white;
     font-size: 2rem;
-    display: inline;
+    display: inline-block;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        height: 4rem;
+        line-height: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .choices {
+        gap: 1rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .choice {
+        height: 110px;
+        width: 110px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .score-board {
+        margin-top: 2.5rem;
+        gap: 3rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3rem;
+    }
+
+    .score-board p {
+        font-size: 1rem;
+    }
+
+    .message-container {
+        margin-top: 3rem;
+        padding: 0 1rem;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+        border-radius: 0.7rem;
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .choices {
+        gap: 0.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .choice {
+        height: 90px;
+        width: 90px;
+    }
+
+    img {
+        height: 82px;
+        width: 82px;
+    }
+
+    .score-board {
+        gap: 2rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 2.5rem;
+    }
+
+    #msg {
+        font-size: 1rem;
+        padding: 0.7rem;
+    }
 }
